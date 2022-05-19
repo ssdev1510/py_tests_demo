@@ -36,9 +36,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
   
   test:
-      name: test
-      runs-on: ubuntu-latest
-      need: build
+    name: test
+    runs-on: ubuntu-latest
+    need: build
      
     steps: 
     - name: Test with pytest
