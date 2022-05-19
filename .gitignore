@@ -2,3 +2,4 @@
 venv
 *.html
 .pytest_cache
+.vscode
