@@ -17,7 +17,7 @@ jobs:
         DOCKER_USERNAME: ${{secret.DOCKER_USERNAME}}
         DOCKER_PASSWORD: ${{secret.DOCKER_PASSWORD}}
     -name: Build and push
-      run: | 
+      run: |
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         docker build -t pydemo:v0.1 -f docker/Dockerfile .
         docker push pydemo:v0.1
