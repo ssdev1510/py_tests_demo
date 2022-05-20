@@ -1,4 +1,4 @@
-name: Python PyTest
+name: Docker Build And Push
 
 on:
   push:
