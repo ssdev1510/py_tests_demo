@@ -19,7 +19,7 @@ jobs:
 
     - uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: ssdocker1510/pydemo:v0.1
+        image: ssdocker1510/pydemo
         dockerfile: docker/Dockerfile
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
