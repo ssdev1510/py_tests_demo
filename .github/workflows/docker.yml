@@ -15,13 +15,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout source code
     - uses: actions/checkout@v3
         
+    - name: Docker Image Build And Push
     - env:
         DOCKER_USERNAME: ${{ secret.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secret.DOCKER_PASSWORD }}
-    - name: Docker Image Build And Push
+        DOCKER_PASSWORD: ${{ secret.DOCKER_PASSWORD }}    
       run: |
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         docker build -t pydemo:v0.1 -f docker/Dockerfile .
