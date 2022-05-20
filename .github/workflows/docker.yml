@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v3
         
     - name: Docker Image Build And Push
-    - env:
+      env:
         DOCKER_USERNAME: ${{ secret.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secret.DOCKER_PASSWORD }}    
       run: |
